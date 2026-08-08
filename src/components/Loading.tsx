@@ -20,17 +20,24 @@ const Loading = ({ percent }: { percent: number }) => {
   }
 
   useEffect(() => {
-    import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
-        setClicked(true);
-        setTimeout(() => {
-          if (module.initialFX) {
-            module.initialFX();
-          }
+    import("./utils/initialFX")
+      .then((module) => {
+        if (isLoaded) {
+          setClicked(true);
+          setTimeout(() => {
+            if (module.initialFX) {
+              module.initialFX();
+            }
+            setIsLoading(false);
+          }, 900);
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load initialFX", err);
+        if (isLoaded) {
           setIsLoading(false);
-        }, 900);
-      }
-    });
+        }
+      });
   }, [isLoaded]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
@@ -46,7 +53,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
+          S.V
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -62,8 +69,8 @@ const Loading = ({ percent }: { percent: number }) => {
       <div className="loading-screen">
         <div className="loading-marquee">
           <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+            <span> A UX Designer</span> <span>A UI Designer</span>
+            <span> A UX Designer</span> <span>A UI Designer</span>
           </Marquee>
         </div>
         <div

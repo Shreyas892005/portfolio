@@ -6,6 +6,39 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
+const projects = [
+  {
+    name: "FitSync - Fitness & Nutrition App",
+    category: "Fitness & Nutrition / UI UX Design",
+    tools: "Figma, UX Research, UI Design, Prototyping, User Flows, Information Architecture"
+  },
+  {
+    name: "Ishaara | Design For Special Needs",
+    category: "Accessibility / Inclusive Design",
+    tools: "Figma, UX Research, Inclusive Design, Accessibility, Prototyping, User Testing"
+  },
+  {
+    name: "Myntra's Maya Chatbot",
+    category: "AI / Conversational UX",
+    tools: "Figma, UX Research, Conversational Design, AI, User Flows, Prototyping"
+  },
+  {
+    name: "Designing Agentic AI for Samsung",
+    category: "AI / Product Design",
+    tools: "Figma, UX Research, AI, Agentic UX, User Flows, UI Design, Prototyping"
+  },
+  {
+    name: "EvenOut: Advanced Studies in Interaction Design",
+    category: "Interaction Design / UX Design",
+    tools: "Figma, Interaction Design, UX Research, Prototyping, User Testing"
+  },
+  {
+    name: "Pottery Wheel | Ergonomics",
+    category: "Product Design / Ergonomics",
+    tools: "Figma, Ergonomics, Human Factors, Product Research, Physical Prototyping"
+  }
+];
+
 const Work = () => {
   useGSAP(() => {
   let translateX: number = 0;
@@ -53,19 +86,19 @@ const Work = () => {
           My <span>Work</span>
         </h2>
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
+          {projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.name}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
                 <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
+                <p>{project.tools}</p>
               </div>
               <WorkImage image="/images/placeholder.webp" alt="" />
             </div>

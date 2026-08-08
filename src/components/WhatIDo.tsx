@@ -87,24 +87,24 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>EXPERTISE</h3>
+              <h4>Skills</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                UX Design, UI Creation, Research, Wireframing, Prototyping, Design Analysis, User Testing, and Design Methods.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Software & Languages</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Figma</div>
+                <div className="what-tags">Adobe Photoshop</div>
+                <div className="what-tags">Adobe Illustrator</div>
+                <div className="what-tags">Framer</div>
+                <div className="what-tags">Google Antigravity</div>
+                <div className="what-tags">English</div>
+                <div className="what-tags">Hindi</div>
+                <div className="what-tags">Tamil</div>
+                <div className="what-tags">Malayalam</div>
+                <div className="what-tags">Telugu</div>
+                <div className="what-tags">Marathi</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +128,17 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>EDUCATION & LEADERSHIP</h3>
+              <h4>Education</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                <b>MIT Institute of Design</b> - Bachelor of Design (B.DES), UI&UX (2023 - 2027) <br />
+                <b>New Bombay City High School</b> - XII (Senior Secondary) (2021 - 2023) <br />
+                <b>Kendriya Vidyalaya Port Trust</b> - X (Secondary) (2021 - 2022)
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Leadership Experience</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Club Head — Khel MITID</div>
+                <div className="what-tags">Google Student Ambassador</div>
               </div>
               <div className="what-arrow"></div>
             </div>
