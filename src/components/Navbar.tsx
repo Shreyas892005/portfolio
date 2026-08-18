@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
@@ -23,18 +24,6 @@ const Navbar = () => {
     smoother.scrollTop(0);
     smoother.paused(true);
 
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
-        }
-      });
-    });
     window.addEventListener("resize", () => {
       ScrollSmoother.refresh(true);
     });
@@ -42,31 +31,34 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          S.V
-        </a>
-        <a
-          href="mailto:shreyasvaidyanathan@gmail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          shreyasvaidyanathan@gmail.com
-        </a>
+        <Link to="/" className="navbar-title" data-cursor="disable">
+          S.V.
+        </Link>
         <ul>
           <li>
-            <a data-href="#about" href="#about">
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")} end>
+              <HoverLinks text="HOME" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/work" className={({ isActive }) => (isActive ? "active-link" : "")}>
+              <HoverLinks text="PROJECTS" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? "active-link" : "")}>
               <HoverLinks text="ABOUT" />
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
-            </a>
+            <NavLink to="/play" className={({ isActive }) => (isActive ? "active-link" : "")}>
+              <HoverLinks text="PLAYGROUND" />
+            </NavLink>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? "active-link" : "")}>
               <HoverLinks text="CONTACT" />
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
